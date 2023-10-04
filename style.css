@@ -11,9 +11,10 @@ p {
     margin: 15px 0 20px 0;
 }
 
-#test-box{
-    display: flex;
+.box-card{
+    background-color:aqua;
+   display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-}
+}/**/
