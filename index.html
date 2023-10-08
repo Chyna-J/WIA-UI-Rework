@@ -2,16 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>WIA Dashboard</title>
 </head>
 <body>
-<section id="test-box">   
-    <button class="update">UPDATE</button> 
+<section id="test-box">
+    <div class="card">
     <div class="header"><img src="img/kelly-sikkema-YXWoEn5uOvg-unsplash.jpg" alt="">
         <!--<p class="p-text">Sequence Duration</p>
         <input type="number">
         <button>DELETE</button> -->
+        
+        <div class="update"><button>UPDATE</button> </div>
     </div>
     <div class="body">
         <p class="p-text">Sequence Duration</p>
@@ -20,6 +25,67 @@
     <div class="footer">
         <button class="delete">DELETE</button>
     </div>
+</div>
+<div class="card">
+    <div class="header"><img src="img/kelly-sikkema-YXWoEn5uOvg-unsplash.jpg" alt="">
+        <!--<p class="p-text">Sequence Duration</p>
+        <input type="number">
+        <button>DELETE</button> -->
+        
+        <div class="update"><button>EDIT</button> </div>
+    </div>
+    <div class="body"  style="padding: 10px 20px;">
+
+        <p>Lorem ipsum dolor sit</p>
+        <h3>Lorem ipsum dolor</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
+    </div>
+    <!--<div class="footer">
+        <button class="delete">DELETE</button>
+    </div>-->
+</div>
+</section>
+<section id="dashboard">
+    <!-- Server Page -->
+<div>  <!-- contains everything -->
+
+    <div class="dash">
+        <div class="board">
+            <h1 class="name" id="ServerDisplayName">Server Name</h1>
+        </div>
+        <div class="lead">
+            <h3>Server ID</h3>
+            <p  id="ServerGUID">000-000-000-000</p>
+        </div>
+        <div class="status">
+            <h3>Connection Status</h3>
+            <p id="ServerStatusText">disconnected</p>
+        </div>
+        <div>
+            <button class="btn btn-primary" id="retryConnectionButton" onclick="ConnectToMasterClient()" hidden>retry connection</button>
+        </div>
+    </div>
+
+    <div class="dash">
+        <table class="table table-light table-hover">
+            <!-- Table headers and rows will be added dynamically -->
+            <thead>
+                <tr>
+                    <th>Client ID  </th>
+                    <th>Client Name</th>
+                </tr>
+            </thead>
+            <tbody id="clientDisplayGrid">
+                <tr class="table-entry" id="${_clientNode.clientConnectionID}">
+                    <td>${_clientNode.clientProfileID}</td> 
+                    <td>${_clientNode.clientDisplayName}</td> 
+                </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- <hr class="my-4"> Client page (Hidden or at least shows as little as possible until it's populated) -->
+    <!-- div class="row row-cols-4 my-5 bg-light" id="clientDisplayGrid"></div -->
+</div>
 </section>
 </body>
 </html><!-- -->
